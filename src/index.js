@@ -1,3 +1,4 @@
-import audible from './audible';
+import audible, { CONFIGURATION_PROVIDER } from './audible';
 
-export { audible };
+export { CONFIGURATION_PROVIDER };
+export default audible;
