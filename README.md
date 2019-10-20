@@ -1,5 +1,5 @@
 # 🏈️ Audible.js
-Audible.js is a tool for Vue.js to enable stage dependant deployments.
+Audible.js is a tool for Vue.js to enable staged deployments.
 
 > Audibles are used in american football when the quaterback wants to change the play during the pre snap. Just like in football, audible.js changes the configuration during runtime just before it reaches the client (which would be the snap in this case).
 
