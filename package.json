@@ -1,0 +1,32 @@
+{
+  "name": "audible",
+  "version": "1.0.1",
+  "description": "make you app ready for staged deployments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrsi/audible.git"
+  },
+  "keywords": [
+    "deployment",
+    "staging"
+  ],
+  "author": "Christian Siber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrsi/audible/issues"
+  },
+  "homepage": "https://github.com/chrsi/audible#readme",
+  "dependencies": {
+    "axios": "^0.19.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-vue": "^5.2.3"
+  }
+}
