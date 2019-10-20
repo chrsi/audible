@@ -1,5 +1,5 @@
 import axios from 'axios';
-import * as _ from 'lodash';
+import { clone } from 'lodash';
 import { TARGET, getConfigurationTarget } from './config/targetConfig';
 
 /**
@@ -20,7 +20,7 @@ export default {
         window.$config = data;
       }
 
-      const alteredVueOptions = _.clone(vueInstanceOptions, true);
+      const alteredVueOptions = clone(vueInstanceOptions, true);
 
       if (configTarget === TARGET.INJECT) {
         const preconfiguredProviders = alteredVueOptions.provide
