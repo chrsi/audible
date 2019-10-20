@@ -19,5 +19,45 @@ To overcome this issue, audible.js changes the configuration during runtime. Bef
 Use the `audible.call` function to change the configuration during runtime.
 
 ```js
-audible.call('/configuration/appsettings.json', () => new Vue(options));
+audible.call('/configuration/appsettings.json', options).then(postSnapOptions => {
+  const vm = new Vue(postSnapOptions);
+});
+```
+
+## Choose your configuration target
+The configuration target defines where the configuration will be stored. There are currently 2 targets supported:
+* window object
+* provide/inject (Vue)
+
+### window
+This target stores the configuration object to the global window object.
+```js
+audible.call('/configuration/appsettings.json', options, { target: 'window' }).then(postSnapOptions => {
+  const vm = new Vue(postSnapOptions);
+});
+```
+
+Usage:
+```js
+console.log(window.apiUrl);
+```
+
+### provide/inject
+This target provides the configuration with the provide/inject mechanism of Vue.
+```js
+audible.call('/configuration/appsettings.json', options, { target: 'inject' }).then(postSnapOptions => {
+  const vm = new Vue(postSnapOptions);
+});
+```
+
+Usage:
+```js
+import { CONFIGURATION_PROVIDER } from 'audible';
+
+Vue.component('sample', {
+  inject: { config: CONFIGURATION_PROVIDER },
+  mounted: function() {
+    console.log(this.config.apiUrl);
+  }
+});
 ```
