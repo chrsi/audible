@@ -1,8 +1,8 @@
 {
-  "name": "audible",
-  "version": "0.1.0",
+  "name": "@csiber/audible",
+  "version": "0.1.1",
   "description": "make you app ready for staged deployments",
-  "main": "dist/app.bundle.js",
+  "main": "dist/audible.bundle.js",
   "scripts": {
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
