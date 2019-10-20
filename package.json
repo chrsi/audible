@@ -1,9 +1,10 @@
 {
   "name": "audible",
-  "version": "1.0.1",
+  "version": "0.1.0",
   "description": "make you app ready for staged deployments",
-  "main": "index.js",
+  "main": "dist/app.bundle.js",
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +29,8 @@
     "eslint": "^6.5.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-vue": "^5.2.3"
+    "eslint-plugin-vue": "^5.2.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
   }
 }
