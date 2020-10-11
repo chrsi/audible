@@ -22,20 +22,16 @@
   },
   "homepage": "https://github.com/chrsi/audible#readme",
   "dependencies": {
-    "axios": "^0.19.0",
-    "lodash": "^4.17.15"
+    "axios": "^0.19.2",
+    "lodash": "^4.17.20"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
-    "babel-loader": "^8.0.6",
-    "babel-plugin-add-module-exports": "^1.0.2",
-    "eslint": "^6.5.1",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-vue": "^5.2.3",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9"
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-add-module-exports": "^1.0.4",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   },
   "engines": {
     "node": ">= 6"
