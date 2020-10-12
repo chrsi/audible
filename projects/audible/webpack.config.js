@@ -19,5 +19,5 @@ module.exports = {
       },
     ],
   },
-  externals: ['lodash', 'axios'],
+  externals: ['lodash'],
 };

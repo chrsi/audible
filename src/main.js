@@ -8,7 +8,7 @@ const options = {
   render: h => h(App),
 };
 
-audible.call('/appsettings.json', options).then(postSnapOptions => {
+audible.call({ url: '/appsettings.json' }, options).then(postSnapOptions => {
   const vm = new Vue(postSnapOptions);
   vm.$mount('#app')
 });
