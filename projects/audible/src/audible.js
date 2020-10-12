@@ -1,4 +1,5 @@
-import axios from 'axios';
+import localFetch from './file-fetcher/local-file-fetcher';
+import webFetch from './file-fetcher/web-file-fetcher';
 import { clone } from 'lodash';
 import { TARGET, getConfigurationTarget } from './config/targetConfig';
 
@@ -13,9 +14,12 @@ export default {
    * @param {string} configurationUrl specifies the location of the configuration file
    * @param {object} vueInstanceOptions options for creating the vue application instance
    */
-  call(configurationUrl, vueInstanceOptions, options = {}) {
+  call(configuration, vueInstanceOptions, options = {}) {
     const configTarget = getConfigurationTarget(options.target);
-    return axios.get(configurationUrl).then(({ data }) => {
+
+    const fileFetcher = configuration.host == 'local' ? localFetch : webFetch;
+
+    return fileFetcher.get(configuration.url).then((data) => {
       if (configTarget === TARGET.WINDOW) {
         window.$config = data;
       }

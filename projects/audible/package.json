@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/chrsi/audible#readme",
   "dependencies": {
-    "axios": "^0.19.2",
     "lodash": "^4.17.20"
   },
   "devDependencies": {
