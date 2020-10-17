@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'Text',
+  name: 'AppText',
   props: {
     value: String
   }
