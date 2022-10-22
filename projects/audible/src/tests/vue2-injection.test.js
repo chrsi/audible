@@ -1,4 +1,4 @@
-import { mount } from 'vue-test-utils';
+import { mount } from '@vue/test-utils';
 import audible from '../audible';
 import webFetch from '../file-fetcher/web-file-fetcher';
 
@@ -9,6 +9,7 @@ describe('vue 2 provide/inject target', () => {
     }));
 
     const TestComponent = {
+      template: '<p></p>',
       inject: ['$configuration'],
       data: function() {
         return {
