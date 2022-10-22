@@ -15,7 +15,7 @@ export default {
    * @param {object} vueInstanceOptions options for creating the vue application instance
    */
   call(configuration, vueInstanceOptions, options = {}) {
-    const configTarget = getConfigurationTarget(options.target);
+    const configTarget = getConfigurationTarget(configuration.target);
 
     const fileFetcher = configuration.host == 'local' ? localFetch : webFetch;
 
